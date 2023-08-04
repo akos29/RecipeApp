@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'nav' %>
 <header>
-  <nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <%= link_to "Foods", foods_path %>
     <% if user_signed_in?%>
     <%= link_to "Recipes", user_recipes_path(current_user) %>
