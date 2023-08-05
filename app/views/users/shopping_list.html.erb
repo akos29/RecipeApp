@@ -1,0 +1,31 @@
+<%= stylesheet_link_tag 'foodindex' %>
+<p style="color: green"><%= notice %></p>
+
+<div class='shopping-container'>
+  <h2 class="text-center">Shopping List</h2>
+  <% if @lists.empty? %>
+    <p class="text-center"> <i> Your shopping list is empty </i></p>
+  <% else %>
+    <div class='shopping-summary'>
+      <p>Amount of food items to buy: <b><%= @lists.length %></b></p>
+      <p>Total value of food needed: <b><%= number_to_currency(@total_value) %></b></p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @lists.each do |item| %>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= item.quantity %> <%= item.measurement_unit %></td>
+            <td><%= number_to_currency(item.price * item.quantity) %></td>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</div>

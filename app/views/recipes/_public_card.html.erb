@@ -1,0 +1,20 @@
+<div class="card mb-3" style="width: 50rem;">
+  <div class="card-body d-flex space-between">
+    <div class="card-body d-flex flex-column col-md-8">
+      <h5 class="card-title">
+        <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id) %>
+      </h5>
+      <% if recipe.user.present? %>
+        <h6 class="card-subtitle mb-2 text-muted"><%= recipe.user.name %></h6>
+      <% else %>
+        <h6 class="card-subtitle mb-2 text-muted">Unknown User</h6>
+      <% end %>
+      <p class="mt-4"><%= recipe.description %></p>
+    </div>
+    <div class="card-body d-flex flex-column text-center col-md-4">
+    <p class="card-text">Total food items: <%= recipe.foods_counter %></p>
+    <p class="card-text">Total Price: $
+      <%=  recipe.foods_total_price  %>
+    </div>
+  </div>
+</div>

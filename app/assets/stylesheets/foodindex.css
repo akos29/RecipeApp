@@ -1,0 +1,51 @@
+.foodindex-container {
+  padding: 4rem 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 4rem auto;
+}
+
+td,
+th {
+  border: 2px solid #dee2e6;
+  text-align: left;
+  padding: 10px;
+  width: 150px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.foodindex-container .add-btn {
+  background-color: #1aa1b9;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-left: 80%;
+  text-decoration: none;
+}
+
+.foodindex-container .delete-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Shopping list styling */
+.shopping-container {
+  padding: 0 4rem;
+}
+
+.shopping-summary {
+  display: flex;
+  justify-content: space-between;
+}
